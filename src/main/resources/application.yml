@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: jir_backend
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5432/projects
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+  ai:
+    ollama:
+      base-url: http://127.0.0.1:11434
+      chat:
+        options:
+          model: gemma3
+
+
+jwt:
+  secret: "my_secret_long_long_long_long_long_long_long"
+  expiration: 3600000
+
