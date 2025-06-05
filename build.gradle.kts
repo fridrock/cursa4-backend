@@ -43,6 +43,8 @@ dependencies {
 	implementation("org.postgresql:postgresql:42.7.5")
 	implementation("org.mapstruct:mapstruct:1.5.5.Final")
 	implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.19.0")
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
+	implementation("org.springframework.boot:spring-boot-starter-validation:3.5.0")
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.5.5.Final")
 	compileOnly("org.projectlombok:lombok:1.18.30")
 	annotationProcessor("org.projectlombok:lombok:1.18.30")
@@ -57,6 +59,7 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("org.springframework.ai:spring-ai-starter-model-ollama")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	testImplementation("org.springframework.security:spring-security-test")
 }
 
 dependencies {

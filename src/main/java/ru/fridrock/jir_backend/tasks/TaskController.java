@@ -26,12 +26,12 @@ public class TaskController {
     private final TaskService taskService;
 
     @PostMapping
-    public TaskDto create(@Valid @RequestBody TaskDto TaskDto) {
+    public TaskDto create(@RequestBody @Valid TaskDto TaskDto) {
         return taskService.create(TaskDto);
     }
 
     @PatchMapping
-    public TaskDto edit(@Valid @RequestBody TaskDto TaskDto) {
+    public TaskDto edit(@RequestBody @Valid TaskDto TaskDto) {
         return taskService.update(TaskDto);
     }
 
@@ -54,7 +54,7 @@ public class TaskController {
     }
 
     @PostMapping("/ai")
-    public TaskDto createTaskByAi(@RequestBody AiCreateTaskDto dto) {
+    public TaskDto createTaskByAi(@RequestBody @Valid AiCreateTaskDto dto) {
         return taskService.generateTasksWithAi(dto);
     }
 
